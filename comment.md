@@ -1,0 +1,7 @@
+-create the repository
+-Initialize the repository
+-node_modules , package.json , package.lock-json
+-create a server
+-listen to port 7777
+-write request handler for /test, /hello
+-Install nodemon and update script inside package.json
