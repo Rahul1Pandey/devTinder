@@ -2,18 +2,16 @@ const express = require('express');
 
 const app = express();
 
-app.use("/",(req,res)=>{
-    res.send("Hello ......");
+
+
+app.use("/user",(req,res,next)=>{
+    
+    next();
+    res.send("1st response!");
+},(req,res)=>{
+    res.send("2nd response!");
 })
 
-app.use("/hello",(req,res)=>{
-    res.send("Hello World from the server!");
-})
- 
-app.use("/test",(req,res)=>{
-    res.send("Hello from the server!");
-})
-
-app.listen(3000 , ()=>{
-    console.log("server is running on port 3000");
+app.listen(7777, ()=>{
+    console.log("server is running on port 7777");
 });
