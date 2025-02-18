@@ -19,3 +19,9 @@
 - Multiple route handling
 - next()
 - next function and errors alng with res.send()
+- app.use("/route",rh,[rh2,rh3],rh4,rh5)
+- error Handling using app.use("/",(err,req,res,next)=>{})
+
+
+
+
