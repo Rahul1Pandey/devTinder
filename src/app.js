@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.post("/signup",async (req,res)=>{
-    // console.log(req.body);
+   
  
     const user = new User(req.body);
 
@@ -18,6 +18,37 @@ app.post("/signup",async (req,res)=>{
         res.send(err.message)
     }
     
+})
+
+app.get("/user",async(req,res)=>{
+        const userEmail = req.body.email;
+
+        try{
+            const user = await User.find({email:userEmail});
+
+            if(user.length===0){
+                res.status(404).send("user not found")
+            }else{
+                res.send(user);
+            }
+            
+        }
+        catch(err){
+            res.status(400).send("something wents wrong")
+        }
+       
+})
+
+app.get("/feed",async(req,res)=>{
+   
+    try{
+        const user = await User.find({});
+        res.send(user);  
+    }
+    catch(err){
+        res.status(400).send("something wents wrong")
+    }
+   
 })
 
 
