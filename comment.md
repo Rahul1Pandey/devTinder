@@ -40,5 +40,10 @@
 - API - feed API - GET/feed - get all the users from the database
 - User.findOne with duplicate emailId , which object returend
 
-
+- Explore schematype options from the    documantations 
+- add required , unique lowercase , min minlength , trim
+- Add default
+- Create a custom validate function for gender
+- Improve the database scheme - Put all appropiate validation on each field in scheme 
+- Add timestamps to the userscheme
 
